@@ -1,7 +1,6 @@
-source ./_files/helpers/uiMenu.sh
-source ./_files/helpers/menuContent.sh
+source ./_files/modules/MainModule.sh
+source ./_files/pages/greeting.sh
 
+greeting
+MainModule
 
-
-
-uiMenu "${M00S[@]}"
