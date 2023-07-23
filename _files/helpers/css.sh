@@ -2,9 +2,11 @@
 # CSS HELPER
 source ./_files/helpers/colors.sh
 
-dropStyles=$dropAllEffects
+ $dropAllEffects
 
 menuBackground=$cyanBGD
+
+mainCLIQuestionStyle=$boldTE$blackBGD$greenTCD
 
 #MENU FRAME
 menuFrameBackground=$magentaBGD

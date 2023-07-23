@@ -1,10 +1,13 @@
 #!/bin/bash
+source ./_files/helpers/menuContent.sh
+source ./_files/helpers/css.sh
 
-source ./_files/pages/wrongSelection.sh
 
 
 cliSelector(){
-   read -p "CHOOSE THE NEXT ACTION: " ans
+  echo -e "$mainCLIQuestionStyle"
+  read -p "$MQCLI" ans
+  echo -e "$dropStyles"
       case $ans in
         1) $1;${11};;
         2) $2;${11};;
