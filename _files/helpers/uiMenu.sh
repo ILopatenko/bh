@@ -4,7 +4,7 @@ source ./_files/helpers/css.sh
 
 
 #LENGTH (WIDTH) OF INNER MENU (SHOUD BE ODD)
-menuWidth=49
+menuWidth=55
 frameSymbol="R"
 
 framePart="$menuFrame $frameSymbol $dropStyles"

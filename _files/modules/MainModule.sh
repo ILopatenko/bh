@@ -15,17 +15,17 @@ MainModule(){
    uiMenu \
    "$MI00_01" \
    "$MI00_02" \
+   "$MI00_03" \
+   "$MI00_04" \
+   "$MI00_05" \
    false \
-   false \
-   false \
-   false \
-   false \
-   false \
+   "$MI00_07" \
+   "$MI00_08" \
    "$MT00"
    
    cliSelector \
-   "echo 'hello1'" \
-   "echo 'hello2'" \
+   inDevelopment \
+   inDevelopment \
    inDevelopment \
    inDevelopment \
    inDevelopment \
