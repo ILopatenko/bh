@@ -4,36 +4,36 @@
 source ./_files/helpers/uiMenu.sh
 source ./_files/helpers/cliSelector.sh
 source ./_files/helpers/menuContent.sh
+source ./_files/helpers/actions.sh
 
 source ./_files/pages/wrongSelection.sh
 source ./_files/pages/inDevelopment.sh
 source ./_files/pages/last.sh
 
-source ./_files/modules/ServerModule.sh
 
 
-MainModule(){
+ServerModule(){
    uiMenu \
-   "$MI00_01" \
-   "$MI00_02" \
-   "$MI00_03" \
-   "$MI00_04" \
-   "$MI00_05" \
+   "$MI01_01" \
+   "$MI01_02" \
+   "$MI01_03" \
+   "$MI01_04" \
    false \
-   "$MI00_07" \
-   "$MI00_08" \
-   "$MT00"
+   false \
+   false \
+   false \
+   "$MT01"
    
    cliSelector \
-   ServerModule \
+   updateUpgradeServer \
+   installInitialSoftServer \
+   installDockerStack \
    inDevelopment \
    inDevelopment \
    inDevelopment \
    inDevelopment \
    inDevelopment \
-   inDevelopment \
-   inDevelopment \
-   last \
+   MainModule \
    wrongSelection \
-   MainModule
+   ServerModule
 }
