@@ -53,3 +53,20 @@ MI01_05="placeholder"
 MI01_06="placeholder"
 MI01_07="placeholder"
 MI01_08="placeholder"
+
+
+
+
+
+
+
+#PERSONAL MENU
+MT07="MY PERSONAL SETTINGS"
+MI07_01="INSTALL APP FOR KEYBOARD EVGA Z15"
+MI07_02="CONNECT LAN NFS SHARES"
+MI07_03="placeholder"
+MI07_04="placeholder"
+MI07_05="placeholder"
+MI07_06="placeholder"
+MI07_07="placeholder"
+MI07_08="placeholder"

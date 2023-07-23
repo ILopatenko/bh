@@ -1,40 +1,39 @@
 #!/bin/bash
-# MAIN MODULE
+# PERSONAL MODULE
 
 source ./_files/helpers/uiMenu.sh
 source ./_files/helpers/cliSelector.sh
 source ./_files/helpers/menuContent.sh
+source ./_files/helpers/actions.sh
 
 source ./_files/pages/wrongSelection.sh
 source ./_files/pages/inDevelopment.sh
 source ./_files/pages/last.sh
 
-source ./_files/modules/ServerModule.sh
-source ./_files/modules/PersonalModule.sh
 
 
-MainModule(){
+PersonalModule(){
    uiMenu \
-   "$MI00_01" \
-   "$MI00_02" \
-   "$MI00_03" \
-   "$MI00_04" \
-   "$MI00_05" \
+   "$MI07_01" \
+   "$MI07_02" \
    false \
-   "$MI00_07" \
-   "$MI00_08" \
-   "$MT00"
+   false \
+   false \
+   false \
+   false \
+   false \
+   "$MT07"
    
    cliSelector \
-   ServerModule \
+   updateUpgradeServer \
    inDevelopment \
    inDevelopment \
    inDevelopment \
    inDevelopment \
    inDevelopment \
-   PersonalModule \
    inDevelopment \
-   last \
+   inDevelopment \
+   MainModule \
    wrongSelection \
-   MainModule
+   PersonalModule
 }
