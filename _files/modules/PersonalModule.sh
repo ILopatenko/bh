@@ -10,6 +10,8 @@ source ./_files/pages/wrongSelection.sh
 source ./_files/pages/inDevelopment.sh
 source ./_files/pages/last.sh
 
+source ./_files/modules/sub/NFS.sh
+
 
 
 PersonalModule(){
@@ -25,8 +27,8 @@ PersonalModule(){
    "$MT07"
    
    cliSelector \
-   updateUpgradeServer \
-   inDevelopment \
+   installOpenRGB \
+   NFS \
    inDevelopment \
    inDevelopment \
    inDevelopment \
