@@ -14,5 +14,5 @@ greeting(){
    "$GP03" \
    false \
    false
-   sleep 2
+   sleep 0.5
 }

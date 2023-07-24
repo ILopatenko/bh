@@ -12,28 +12,28 @@ source ./_files/pages/last.sh
 
 
 
-ServerModule(){
+DesktopModule(){
    uiMenu \
-   "$MI01_01" \
-   "$MI01_02" \
-   "$MI01_03" \
-   "$MI01_04" \
+   "$MI02_01" \
+   "$MI02_02" \
+   "$MI02_03" \
+   "$MI02_04" \
+   "$MI02_05" \
    false \
    false \
    false \
-   false \
-   "$MT01"
+   "$MT02"
    
    cliSelector \
    updateUpgradeServer \
-   installInitialSoftServer \
+   installInitialSoftDesktop \
    installDockerStack \
    installNetmakerClient \
-   inDevelopment \
+   installBigSoft \
    inDevelopment \
    inDevelopment \
    inDevelopment \
    MainModule \
    wrongSelection \
-   ServerModule
+   DesktopModule
 }

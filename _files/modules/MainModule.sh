@@ -10,6 +10,7 @@ source ./_files/pages/inDevelopment.sh
 source ./_files/pages/last.sh
 
 source ./_files/modules/ServerModule.sh
+source ./_files/modules/DesktopModule.sh
 source ./_files/modules/PersonalModule.sh
 
 
@@ -27,7 +28,7 @@ MainModule(){
    
    cliSelector \
    ServerModule \
-   inDevelopment \
+   DesktopModule \
    inDevelopment \
    inDevelopment \
    inDevelopment \
