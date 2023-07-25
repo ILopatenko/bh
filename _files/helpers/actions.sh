@@ -166,3 +166,103 @@ bigSoft(){
 installBigSoft(){
    action "$MI02_02" bigSoft
 }
+
+
+existingOracle(){
+   clear -x
+   echo -e "\n$startActionStyle TRYING TO FIND LAN KEYS $dropStyles"
+   echo
+   sleep 0.5
+   path="/home/$USER/Storage/ssd-it/_SSH-keys/myOracle/$1"
+   if [[ -d $path ]]; then
+      echo -e "$startActionStyle FOLDER \n$path EXISTS! $dropStyles"
+      echo
+      sleep 0.5
+      keyName=$(find $path -name "*.key")
+
+      if [[ -n $keyName ]]; then
+         echo -e "\n$startActionStyle $keyName EXISTS AND NOT AN EMPTY FILE! $dropStyles"
+         echo
+         sleep 0.5
+         chmod 400 $keyName
+         serverIP=$(cat $path/ip.txt)
+         echo -e "\n$startActionStyle TRYING TO FIND SAVED SERVERS IP $dropStyles"
+         echo
+         sleep 0.5
+         if [[ -n "$path/ip.txt" ]]; then
+            echo -e "\n$startActionStyle $path/ip.txt EXISTS AND NOT AN EMPTY FILE! $dropStyles"
+            echo
+            sleep 0.5
+            echo -e "\n$startActionStyle TRYING TO CONNECT TO \n ubuntu@$serverIP WITH $keyName KEY $dropStyles"
+            echo
+            sleep 0.5
+            if [[ $2 == "-hint" ]]; then
+               echo
+               echo -e "$hint $oracleFirstCommand $dropStyles"
+               echo
+            fi
+            ssh -i $keyName ubuntu@$serverIP
+            
+         else
+            echo -e "\n$startActionStyle $path/ip.txt DOES NOT EXISTS OR AN EMPTY FILE! $dropStyles"
+            echo
+            sleep 1
+            OracleModule
+         fi
+      else
+         echo -e "\n$startActionStyle $path DOES NOT EXISTS OR AN EMPTY FILE! $dropStyles"
+         echo
+         sleep 1
+         OracleModule
+      fi
+   else
+      echo -e "/n$startActionStyle FOLDER $path DOES NOT EXISTS! $dropStyles"
+      echo
+      sleep 1
+      OracleModule
+   fi
+}
+
+
+
+
+connectToExistingNetmaker(){
+   existingOracle "netmaker"
+}
+
+connectToExistingNginx(){
+   existingOracle "nginx"
+}
+
+
+oracleFirstCommand="
+Step 1 - login as ROOT:
+sudo -i
+
+Step 2 - use this command:
+sudo fallocate -l 2048M /root/swapfile && sudo ls -lh /root/swapfile && sudo chmod 600 /root/swapfile && sudo mkswap /root/swapfile && sudo swapon /root/swapfile && sudo echo '/root/swapfile none swap sw 0 0' >> /etc/fstab && sudo apt update && sudo apt upgrade -y && sudo apt install git && git clone https://github.com/ilopatenko/bh && sudo reboot
+"
+
+firstConnectionNetmaker(){
+   existingOracle "netmaker" "-hint"
+}
+
+firstConnectionNginx(){
+   existingOracle "nginx" "-hint"
+}
+
+
+installNetmakerServer(){
+   sudo wget -qO /root/nm-quick-interactive.sh https://raw.githubusercontent.com/gravitl/netmaker/master/scripts/nm-quick-interactive.sh && sudo chmod +x /root/nm-quick-interactive.sh && sudo /root/nm-quick-interactive.sh
+}
+
+installNetmakerClient(){
+   sudo curl -sL 'https://apt.netmaker.org/gpg.key' | sudo tee /etc/apt/trusted.gpg.d/netclient.asc
+   sudo curl -sL 'https://apt.netmaker.org/debian.deb.txt' | sudo tee /etc/apt/sources.list.d/netclient.list
+   sudo apt update
+   sudo sudo apt install netclient -y
+   sudo ip -br -c a
+}
+
+
+

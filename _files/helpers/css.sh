@@ -21,3 +21,4 @@ mainCLIQuestionStyle=$boldTE$greenTCD$blackBGD
 startActionStyle=$boldTE$italicTE$underlinedTE$blueBGD$grayTCDalmostWhite
 finishActionStyle=$boldTE$italicTE$underlinedTE$blueBGD$greenTCD
 
+hint=$boldTE$yellowBGD$redTCD
