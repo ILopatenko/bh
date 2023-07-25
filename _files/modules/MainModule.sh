@@ -12,6 +12,7 @@ source ./_files/pages/last.sh
 source ./_files/modules/ServerModule.sh
 source ./_files/modules/DesktopModule.sh
 source ./_files/modules/PersonalModule.sh
+source ./_files/modules/OracleModule.sh
 
 
 MainModule(){
@@ -29,7 +30,7 @@ MainModule(){
    cliSelector \
    ServerModule \
    DesktopModule \
-   inDevelopment \
+   OracleModule \
    inDevelopment \
    inDevelopment \
    inDevelopment \
