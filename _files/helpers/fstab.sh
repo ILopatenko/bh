@@ -5,7 +5,7 @@ if [[ $1 == "ssd-it" ]]; then
 #
 # $1 on DELL
 #
-3.3.3.201:/mnt/ssd2terIT/ssd2terITdataSet /home/slon/Storage/ssd-it nfs defaults,retry=0 0 0
+3.3.3.201:/mnt/ssd2terIT/ssd2terITdataSet /home/$2/Storage/ssd-it nfs defaults,retry=0 0 0
 #
 #########################################################################################
 
@@ -19,7 +19,7 @@ if [[ $1 == "ssd-media" ]]; then
 #
 # $1 on DELL
 #
-3.3.3.201:/mnt/ssd2terVideo/ssd2terVideoDataSet /home/slon/Storage/ssd-media nfs defaults,retry=0 0 0
+3.3.3.201:/mnt/ssd2terVideo/ssd2terVideoDataSet /home/$2/Storage/ssd-media nfs defaults,retry=0 0 0
 #
 #########################################################################################
 
@@ -33,7 +33,7 @@ if [[ $1 == "r2ter-share" ]]; then
 #
 # $1 on RYZEN
 #
-3.3.3.51:/mnt/r2ter1/r2ter1ds /home/slon/Storage/r2ter-share nfs defaults,retry=0 0 0
+3.3.3.51:/mnt/r2ter1/r2ter1ds /home/$2/Storage/r2ter-share nfs defaults,retry=0 0 0
 #
 #########################################################################################
 
@@ -47,7 +47,7 @@ if [[ $1 == "r2ter-media" ]]; then
 #
 # $1 on RYZEN
 #
-3.3.3.51:/mnt/r2ter2/r2ter2ds /home/slon/Storage/r2ter-media nfs defaults,retry=0 0 0
+3.3.3.51:/mnt/r2ter2/r2ter2ds /home/$2/Storage/r2ter-media nfs defaults,retry=0 0 0
 #
 #########################################################################################
 
@@ -61,7 +61,7 @@ if [[ $1 == "r4ter-it" ]]; then
 #
 # $1 on RYZEN
 #
-3.3.3.51:/mnt/r4ter/r4terds /home/slon/Storage/r4ter-it nfs defaults,retry=0 0 0
+3.3.3.51:/mnt/r4ter/r4terds /home/$2/Storage/r4ter-it nfs defaults,retry=0 0 0
 #
 #########################################################################################
 

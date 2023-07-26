@@ -21,7 +21,7 @@ OracleModule(){
    "$MI03_04" \
    "$MI03_05" \
    "$MI03_06" \
-   false \
+   "$MI03_07" \
    false \
    "$MT03"
    
