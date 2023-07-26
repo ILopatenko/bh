@@ -115,18 +115,6 @@ connectAll(){
 }
 
 
-#NETMAKER
-netmakerClient(){
-   sudo curl -sL 'https://apt.netmaker.org/gpg.key' | sudo tee /etc/apt/trusted.gpg.d/netclient.asc
-   sudo curl -sL 'https://apt.netmaker.org/debian.deb.txt' | sudo tee /etc/apt/sources.list.d/netclient.list
-   sudo apt update
-   sudo sudo apt install netclient -y
-   sudo ip -br -c a
-}
-
-installNetmakerClient(){
-   action "$MI01_04" netmakerClient
-}
 
 installInitialSoftDesktop(){
    installInitialSoftServer
@@ -253,7 +241,7 @@ firstConnectionNginx(){
 
 
 installNetmakerServer(){
-   sudo wget -qO /root/nm-quick-interactive.sh https://raw.githubusercontent.com/gravitl/netmaker/master/scripts/nm-quick-interactive.sh && sudo chmod +x /root/nm-quick-interactive.sh && sudo /root/nm-quick-interactive.sh
+   sudo wget -qO /root/nm-quick.sh https://raw.githubusercontent.com/gravitl/netmaker/master/scripts/nm-quick.sh && sudo chmod +x /root/nm-quick.sh && sudo /root/nm-quick.sh
 }
 
 installNetmakerClient(){

@@ -1,0 +1,15 @@
+Linux Mint
+
+1. Preconditions:
+   bh project was clonned
+
+2. What were tested:
+   2.1. DesktopModule:
+
+-  update and upgrade
+-  install initial soft
+-  big soft (zoom, slack, vscode, nodej) - asked to enter Y 2 times (additional dependecies)
+-  netmaker client
+
+*  netmaket server (LINK TO THE SH INSTALLER WERE FIXED)
+*  NFS mount path was fixed
