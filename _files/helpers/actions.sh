@@ -224,11 +224,15 @@ connectToExistingNginx(){
 
 
 oracleFirstCommand="
-Step 1 - login as ROOT:
+Step 1 - install git and clone bash-helper repo:
+sudo apt install git -y
+git clone https://github.com/ilopatenko/bh 
+
+Step 2 - login as ROOT:
 sudo -i
 
-Step 2 - use this command:
-sudo fallocate -l 2048M /root/swapfile && sudo ls -lh /root/swapfile && sudo chmod 600 /root/swapfile && sudo mkswap /root/swapfile && sudo swapon /root/swapfile && sudo echo '/root/swapfile none swap sw 0 0' >> /etc/fstab && sudo apt update && sudo apt upgrade -y && sudo apt install git && git clone https://github.com/ilopatenko/bh && sudo reboot
+Step 3 - use this command:
+sudo fallocate -l 2048M /root/swapfile && sudo ls -lh /root/swapfile && sudo chmod 600 /root/swapfile && sudo mkswap /root/swapfile && sudo swapon /root/swapfile && sudo echo '/root/swapfile none swap sw 0 0' >> /etc/fstab && sudo apt update && sudo apt upgrade -y && sudo reboot
 "
 
 firstConnectionNetmaker(){
