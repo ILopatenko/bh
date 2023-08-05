@@ -6,3 +6,5 @@ AA:AA:AA:AA:A0:09
 Assign a new static IP address for this server in LAN router:
 AA-AA-AA-AA-A0-09
 3.3.3.9
+
+apt-get install --download-only gitlab-ce -y
