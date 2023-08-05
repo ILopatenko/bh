@@ -307,7 +307,7 @@ installGitLabServer(){
 
 gitlabRunnerInDocker(){
    echo "lets install docker-runner"
-   sudo docker run -d --name gitlab-runner --restart always \
+   docker run -d --name gitlab-runner --restart always \
   -v /srv/gitlab-runner/config:/etc/gitlab-runner \
   -v /var/run/docker.sock:/var/run/docker.sock \
   gitlab/gitlab-runner:latest
@@ -322,7 +322,7 @@ gitlabRunnerInDocker(){
    6. docker [type of runner]
    7. ubuntu:20.04 [type of base docker image - only ifd you choose docker]
   "
-  sudo docker run --rm -it -v /srv/gitlab-runner/config:/etc/gitlab-runner gitlab/gitlab-runner register
+  docker run --rm -it -v /srv/gitlab-runner/config:/etc/gitlab-runner gitlab/gitlab-runner register
 }
 
 
