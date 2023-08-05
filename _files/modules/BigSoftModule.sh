@@ -29,7 +29,7 @@ BigSoftModule(){
    installDocker \
    installDockerStack \
    installGitLabServer \
-   inDevelopment \
+   installGitLabRunner \
    inDevelopment \
    inDevelopment \
    inDevelopment \

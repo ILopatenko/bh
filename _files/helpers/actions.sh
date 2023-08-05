@@ -305,4 +305,28 @@ installGitLabServer(){
 }
 
 
+gitlabRunnerInDocker(){
+   docker run -d --name gitlab-runner --restart always \
+  -v /srv/gitlab-runner/config:/etc/gitlab-runner \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  gitlab/gitlab-runner:latest
+  echo
+  echo "Use this examoles:"
+  echo "
+   1. https://gitlab.kitqa.com/ [GitLab Server]
+   2. TOKEN (GR1348941-XQdjVBy3Ff2B23U5uPt) [copy this toker on Runners page at GitLab Server]
+   3. build-runner-description [description]
+   4. build-runner-tag [tag]
+   5. EMPTY (ENTER) [additional information / maintance - just click ENTER to skip this step]
+   6. docker [type of runner]
+   7. ubuntu:20.04 [type of base docker image - only ifd you choose docker]
+  "
+  docker run --rm -it -v /srv/gitlab-runner/config:/etc/gitlab-runner gitlab/gitlab-runner register
+}
+
+installGitLabRunner(){
+   action "$MI04_04" gitlabRunnerInDocker
+}
+
+
 
