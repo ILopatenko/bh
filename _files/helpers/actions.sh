@@ -306,6 +306,7 @@ installGitLabServer(){
 
 
 gitlabRunnerInDocker(){
+
    docker run -d --name gitlab-runner --restart always \
   -v /srv/gitlab-runner/config:/etc/gitlab-runner \
   -v /var/run/docker.sock:/var/run/docker.sock \
@@ -325,6 +326,7 @@ gitlabRunnerInDocker(){
 }
 
 installGitLabRunner(){
+   installDocker
    action "$MI04_04" gitlabRunnerInDocker
 }
 
