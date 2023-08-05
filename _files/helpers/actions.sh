@@ -326,7 +326,6 @@ gitlabRunnerInDocker(){
 }
 
 installGitLabRunner(){
-   installDocker
    action "$MI04_04" gitlabRunnerInDocker
 }
 
