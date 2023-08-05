@@ -15,4 +15,5 @@ last(){
    false \
    false
    sleep 2
+   exit
 }

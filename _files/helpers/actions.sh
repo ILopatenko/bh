@@ -264,4 +264,40 @@ installNetmakerClient(){
 }
 
 
+docker(){
+   updateUpgrade
+   curl -L https://get.docker.com | sh
+   sudo usermod -aG docker $USER && sudo reboot
+}
+
+installDocker(){
+   action "$MI04_01" docker
+}
+
+
+pauseTheProcess(){
+   read -p "Press any key (and then press ENTER) to continue " answer
+case $answer in
+    y );;
+    * );;
+esac
+}
+
+
+gitLabCE(){
+   updateUpgrade
+   sudo apt-get install curl openssh-server ca-certificates tzdata perl -y
+   curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh | sudo bash
+   read -p "Your GitLabCE Server will be available at http://" ans
+   sudo EXTERNAL_URL="http://$ans" apt-get install gitlab-ce -y
+   echo "Login: root"
+   sudo cat /etc/gitlab/initial_root_password | grep Password:
+   pauseTheProcess
+}
+
+installGitLabServer(){
+   action "$MI04_03" gitLabCE
+}
+
+
 
