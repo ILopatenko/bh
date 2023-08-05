@@ -214,7 +214,7 @@ existingOracle(){
 connectToAnyProxMox(){
    clear -x
    read -p "IP address tyo connect is 3.3.3." ans
-   ssh -i /home/slon/Storage/r4ter-it/_SSH-keys/lan/slon-pm/slon-pm slon@3.3.3.$ans
+   ssh -i /home/slon/Storage/r4ter-it/_SSH-keys/lan/slon-pm/slon-pm -o StrictHostKeyChecking=no slon@3.3.3.$ans
 
 }
 
