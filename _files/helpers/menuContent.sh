@@ -91,7 +91,7 @@ MI07_03="placeholder"
 MI07_04="placeholder"
 MI07_05="placeholder"
 MI07_06="placeholder"
-MI07_07="placeholder"
+MI07_07="CONNECT TO THE LAN PROXMOX SERVER"
 MI07_08="placeholder"
 
 
