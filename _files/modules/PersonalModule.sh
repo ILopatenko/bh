@@ -22,7 +22,7 @@ PersonalModule(){
    false \
    false \
    false \
-   false \
+   "$MI07_07" \
    false \
    "$MT07"
    
@@ -33,7 +33,7 @@ PersonalModule(){
    inDevelopment \
    inDevelopment \
    inDevelopment \
-   inDevelopment \
+   connectToAnyProxMox \
    inDevelopment \
    MainModule \
    wrongSelection \

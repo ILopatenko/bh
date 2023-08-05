@@ -1,0 +1,9 @@
+ffmpeg -i 001\ Introduction.mp4 -c:a aac -b:a 64k -c:v vp9 -r 24 -b:v 192k -s 1280x720 output.mkv
+
+
+
+
+ 
+
+
+
