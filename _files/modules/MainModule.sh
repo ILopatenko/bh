@@ -13,6 +13,7 @@ source ./_files/modules/ServerModule.sh
 source ./_files/modules/DesktopModule.sh
 source ./_files/modules/PersonalModule.sh
 source ./_files/modules/OracleModule.sh
+source ./_files/modules/BigSoftModule.sh
 
 
 MainModule(){
@@ -21,17 +22,17 @@ MainModule(){
    "$MI00_02" \
    "$MI00_03" \
    "$MI00_04" \
-   "$MI00_05" \
+   false \
    false \
    "$MI00_07" \
-   "$MI00_08" \
+   false \
    "$MT00"
    
    cliSelector \
    ServerModule \
    DesktopModule \
    OracleModule \
-   inDevelopment \
+   BigSoftModule \
    inDevelopment \
    inDevelopment \
    PersonalModule \
